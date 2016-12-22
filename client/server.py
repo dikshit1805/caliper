@@ -93,7 +93,6 @@ if __name__ == "__main__":
     lock_yaml = 'lock.yaml'
     set_signals()
     if not os.path.exists(lock_yaml):
-	print("Creaking lock_yaml")
         with SimpleFlock(lock_yaml,60):
             fp = open(lock_yaml,'w')
             dic = {"status":0}
@@ -131,7 +130,6 @@ if __name__ == "__main__":
         # create a socket object
         serversocket = socket.socket(
                         socket.AF_INET, socket.SOCK_STREAM) 
-
         # get local machine name
         host = ''                           
         
